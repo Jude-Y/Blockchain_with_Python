@@ -24,6 +24,7 @@ For additional Information on installing HD wallet, please follow the step by st
 ## **Bitcoin Testnet Transaction**
 
 Please make sure you have BTCTEST coins in the sender's wallet before you proceed. You can do so here in the [testnet faucet](https://testnet-faucet.mempool.co/). In your CLI, type "python" and then from wallet import *, just like the image below. Now we can use the send_tx function to send a transaction. Once you send the transaction, you will not get any confirmation but you can check your wallet address you sent to.
+
 ![image](screenshots/send_btctest.png)
 
 You can check your transactions here with your wallet address:
@@ -35,7 +36,9 @@ As you can see below in the right hand bottom corner, a transaction in the amoun
 ## **Local PoA Ethereum transaction**
 
 Sending transaction using your local PoA Ethereum Network. Once you activate your private blockchain network. Go into your CLI, type python, and from wallet import * and finally send a transaction.
+
 ![image](screenshots/trans_id.png)
-Now, open MyCrypto app and login using your sender's private key, click on TX Status. Copy and and paste the Hash Id and click Check TX Status. As you can see below, the transaction has been succesfuly mined in Block Number 3222.
+
+Now, open MyCrypto app and login using your sender's private key, click on TX Status. Copy and paste the Hash Id and click Check TX Status. As you can see below, the transaction has been succesfuly mined in Block Number 3222.
 
 ![image](screenshots/eth_trans_success.png)
