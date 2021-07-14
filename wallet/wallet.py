@@ -35,12 +35,15 @@ def derive_wallets(Mnemonic, Coin, Numderive, Format=json):
 coins = {
     "btc-test": derive_wallets(mnemonic, btctest, 7),
     "eth": derive_wallets(mnemonic, eth, 4),
+    "btc": derive_wallets(mnemonic, btc, 3),
 
 }
 
 # Obtain Private Key for both ETH and BTCTest coin
 eth_pk = (coins['eth'][0]['privkey'])
 btctest_pk = (coins['btc-test'][1]['privkey'])
+btc_pk = (coins['btc'][0]['privkey'])
+
 
 
 
@@ -50,6 +53,9 @@ def priv_key_to_account(coin, priv_key):
         return Account.privateKeyToAccount(priv_key)
         
     if coin == 'btc-test':
+        return PrivateKeyTestnet(priv_key)
+
+    if coin == 'btc':
         return PrivateKeyTestnet(priv_key)
 
 
@@ -76,6 +82,9 @@ def create_tx(coin, account, to, amount):
     elif coin == 'btc-test':
         return PrivateKeyTestnet.prepare_transaction(account.address, [(to, amount, btc)])
 
+    elif coin == 'btc':
+        return PrivateKeyTestnet.prepare_transaction(account.address, [(to, amount, btc)])
+
 
 # Create a function called `send_tx` that calls `create_tx`, signs and sends the transaction.
 def send_tx(coin, account, to, amount):
@@ -95,9 +104,12 @@ recipient = (coins['eth'][3]['address'])
 sender = priv_key_to_account(eth, eth_pk)
 
 # Obtain wallet address and private key for BTCTEST
-btcrecipient = (coins['btc-test'][2]['address'])
-btcsender = priv_key_to_account(btctest, btctest_pk)
+btctest_recipient = (coins['btc-test'][2]['address'])
+btctest_sender = priv_key_to_account(btctest, btctest_pk)
 
+# Obtain wallet address and private key for BTC
+bit_recipient = (coins['btc'][1]['address'])
+bit_sender = priv_key_to_account(btc, btc_pk)
 
 # Local PoA Ethereum transaction (make sure you are connected to Web3 by running your nodes)
 
@@ -107,9 +119,8 @@ account_1 = Account.from_key(pk)
 
 
 # Create a function to get Transacton/Hash Id for ETH
-
-def tx_id(hashid):
-    tx = w3.eth.getTransactionReceipt(send_tx),
+def txid(hashid):
+    tx = w3.eth.getTransactionReceipt(hashid),
     return tx
 
-   
+
