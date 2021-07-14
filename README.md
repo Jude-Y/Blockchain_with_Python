@@ -42,3 +42,7 @@ Sending transaction using your local PoA Ethereum Network. Once you activate you
 Now, open MyCrypto app and login using your sender's private key, click on TX Status. Copy and paste the Hash Id and click Check TX Status. As you can see below, the transaction has been succesfuly mined in Block Number 3222.
 
 ![image](screenshots/eth_trans_success.png)
+
+You can also check your eth transaction in Python as well using the txid function. Copy and paste the hash id just like on the image below.
+
+![image](screenshots/txid_function.png)
