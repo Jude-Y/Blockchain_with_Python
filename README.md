@@ -1,6 +1,6 @@
 # Multi-Blockchain Wallet in Python
 
-### This assignment was to create a universal wallet to manage billions of addresses across 300+ crypto coins, which supports BIP32, BIP39, and BIP44. However, we only have 2 coins(BTCtest, ETH) in our wallet and we will be using BIP44 to derive wallet addresses. In order to send ETH transaction, you will need to run your Blockchain Network using your local host and port which will connect you to web3. In this demonstration, we will send transactions between wallet addresses via Python using CLI.
+This assignment was to create a universal wallet to manage billions of addresses across 300+ crypto coins, which supports BIP32, BIP39, and BIP44. However, we only have 2 coins(BTCtest, ETH) in our wallet and we will be using BIP44 to derive wallet addresses. In order to send ETH transaction, you will need to run your Blockchain Network using your local host and port which will connect you to web3. In this demonstration, we will send transactions between wallet addresses via Python using CLI.
 
 
 #
