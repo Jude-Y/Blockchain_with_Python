@@ -18,7 +18,7 @@ For additional Information on installing HD wallet, please follow the step by st
 * [HD Derive Wallet Install for Windows](https://youtu.be/A_tqm4j4vsY)
 * [HD Derive Wallet Install for Mac](https://youtu.be/c-Qc3Pss6oM)
 
-
+To ensure your 'derive_wallets' function works, please folllow the [instructions](instructions.txt)
 
 
 ## **Bitcoin Testnet Transaction**

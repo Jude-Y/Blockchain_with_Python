@@ -1,0 +1,32 @@
+Create a project directory called `wallet` and `cd` into it.
+
+- Clone the `hd-wallet-derive` tool into this folder and install it using the [HD Wallet Derive Installation Guide]
+
+- Create a symlink called `derive` for the `hd-wallet-derive/hd-wallet-derive.php` script. This will clean up the command needed to run the script in our code, as we can call `./derive` instead of `./hd-wallet-derive/hd-wallet-derive.php`: 
+
+  - Make sure you are in the top level project directory - in this case the directory named `wallet`. 
+  
+  - **Mac Users:** Run the following command: `ln -s hd-wallet-derive/hd-wallet-derive.php derive`. 
+  
+  - **Windows Users:** Creating symlinks is not supported by default on Windows, only reading them, so Windows users must perform the following steps:
+
+    - Open up Git-Bash as an administrator (right-click on Git-Bash in the start menu).
+
+    - Within `bash`, run the command `export MSYS=winsymlinks:nativestrict`.
+    
+    - Run the following command: `ln -s hd-wallet-derive/hd-wallet-derive.php derive`. 
+
+  - Test that you can run the `./derive` script properly, by running the following command within your wallet directory.  
+
+     
+    - ./derive --key=xprv9zbB6Xchu2zRkf6jSEnH9vuy7tpBuq2njDRr9efSGBXSYr1QtN8QHRur28QLQvKRqFThCxopdS1UD61a5q6jGyuJPGLDV9XfYHQto72DAE8 --cols=path,address --coin=ZEC --numderive=3 -g
+
+  You will see the following to show that your ./derive works within your wallet directory. 
+
+  +------+-------------------------------------+
+  | path | address                             |
+  +------+-------------------------------------+
+  | m/0  | t1V1Qp41kbHn159hvVXZL5M1MmVDRe6EdpA |
+  | m/1  | t1Tw6iqFY1g9dKeAqPDAncaUjha8cn9SZqX |
+  | m/2  | t1VGTPzBSSYd27GF8p9rGKGdFuWekKRhug4 |
+  +------+-------------------------------------+
